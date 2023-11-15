@@ -231,7 +231,10 @@
 												<th class="min-w-125px text-end" style="font-family:cairo">رقم الفندق </th>
 												<th class="min-w-125px text-end" style="font-family:cairo"> رقم الغرفة </th>
 												<th class="min-w-125px text-end" style="font-family:cairo">المواصفات </th>
-												<th class="min-w-125px text-end" style="font-family:cairo">الطعام</th>											
+												<th class="min-w-125px text-end" style="font-family:cairo">الطعام</th>
+												@* <th class="min-w-125px text-end" style="font-family:cairo">الصورة1</th>
+												<th class="min-w-125px text-end" style="font-family:cairo">الصورة2</th>
+												<th class="min-w-125px text-end" style="font-family:cairo">الصورة3</th> *@
 												<th class="min-w-125px text-end" style="font-family:cairo" colspan="2">إجراء </th>
 
 											</tr>
@@ -264,8 +267,11 @@
 											<td>@item.IdRoom</td>
 											<td>@item.Features</td>
 											<td>@item.Food</td>
-											<td><a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash text-danger"></i></a></td>
-											<td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit text-success"></i></a></td>
+											<td>@item.Image1</td>
+											<td>@item.Image2</td>
+											<td>@item.Image3</td>
+											<td><a asp-action="DeleteRoomDetails" asp-route-id="@item.Id"><i class="fa fa-trash text-danger"></i></a></td>
+											<td><a asp-action="EditRoomDetails" asp-route-id="@item.Id"><i class="fa fa-edit text-success"></i></a></td>
 
 										</tr>
 
