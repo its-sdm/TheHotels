@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Rooms>
+@{
+    Layout = "~/Views/Shared/_LayoutShopping.cshtml";
+}
+<div class="container" dir="rtl">
+    @foreach (var item in Model)
+    {
+        <div class="row mt-5">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img src="~/images/@item.Images" class="img-thumbnail" />
+                            </div>
+                            <div class="col-sm-9">
+                                <h1 class="alert alert-success">@item.Type</h1>
+                                <hr />
+                                <small>@item.Price</small>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9 text-center">
+                                    <a asp-action="Invoice" asp-route-Id="@item.Id" class="btn btn-success">اختر هذه الغرفة</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    }
+</div>

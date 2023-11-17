@@ -1,0 +1,252 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<Html>
+<head>
+    <link href="~/css/abc.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <style>
+        header {
+            background-color: #2196F3;
+            padding: 10px 15px;
+        }
+
+            header nav .navbar-nav .nav-link {
+                color: #efefef !important;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 0px 18px !important;
+            }
+
+            header .navbar-brand {
+                max-width: 200px;
+            }
+
+
+        /* Header Search Bar */
+        .header-search input[type="text"] {
+            border: none;
+        }
+
+        .header-search .input-group-addon button {
+            color: #fff;
+            background: #ef2d2c;
+            padding: 10px 15px;
+            border: none;
+            font-size: 12px;
+        }
+
+        .select-style {
+            width: auto;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            .select-style select {
+                width: 100%;
+                background: #efefef;
+                color: #000;
+                height: 38px;
+                padding: 0px 9px;
+                border: none;
+                outline: none;
+            }
+
+                .select-style select option.topshow {
+                    padding: 10px 0;
+                    position: relative;
+                    top: 15px;
+                }
+        /* End Header Search Bar */
+
+
+        /* Header cart CSS */
+        header .cart a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header .cart {
+            position: relative;
+            left: -15px;
+        }
+
+            header .cart a span.number {
+                position: relative;
+                left: 38px;
+                top: -4px;
+                color: #ef2d2c;
+            }
+
+            header .cart a span.number {
+                position: relative;
+                left: 38px;
+                top: -4px;
+                color: #ffffff;
+            }
+
+            header .cart a {
+                color: #fff;
+                text-decoration: none;
+            }
+        /* End Header cart CSS */
+
+
+        /* choose store checkbox CSS */
+        header [type="radio"]:checked + label,
+        header [type="radio"]:not(:checked) + label {
+            position: relative;
+            padding-left: 5px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #fff;
+            font-family: "Conv_VisueltPro-Regular";
+            font-size: 14px;
+        }
+
+
+        /* Responsive CSS */
+
+        header .cart a span.number {
+            left: 40px;
+            top: -7px;
+            font-size: 14px;
+        }
+
+        header {
+            padding: 10px 0px;
+        }
+
+        .cart-login {
+            position: absolute;
+            right: 70px;
+        }
+
+        header .navbar-brand {
+            max-width: 150px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    Front-End Design
+    Ui Design
+    Website: www.cupcom.com.br
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+    <!-- Navbar -->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <nav class="navbar navbar-expand-xl navbar-light">
+                        <div class="container-fluid">
+                            <a href="#" class="navbar-brand"><img src="/images/markuptag-white-logo.png" alt="logo" class="img-fluid" /></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Dashboard</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Shopping</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Hotels
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Cider</a></li>
+                                            <li><a class="dropdown-item" href="#">Mead</a></li>
+                                            <li><a class="dropdown-item" href="#">Others</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-3">
+                    <div class="header-search mt-2">
+                        <div class="search-form">
+                            <form method="get">
+                                <div class="input-group">
+                                 
+                                    <input type="text" name="search" id="search" class="form-control" placeholder="Search Here" />
+                                    <div class="input-group-addon">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 cart-login">
+                    <div class="float-end cart mt-2">
+                        <a href="#">
+                            <span class="number">10</span>
+                            <img class="img-fluid" src="/images/cart.png" alt="cart" />
+                            <span>Cart</span>
+                        </a>
+                    </div>
+
+                    <div class="float-end">
+                        <button type="button" class="btn btn-light mt-2 btn-sm">Login</button>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-sm-2 mt-lg-0">
+                    <div class="store-location p-0 text-end">
+                        <div class="form-check-inline">
+                            <input type="radio" id="test1" name="radio-group" data-toggle="modal" data-target=".bd-example-modal-lg" />
+                            <label for="test1">Choose a Store</label>
+                        </div>
+
+                        <div class="form-check-inline">
+                            <img class="img-fluid" src="/images/or.png" alt="Esplanda" width="20" />
+                        </div>
+
+                        <div class="form-check-inline">
+                            <input type="radio" id="test2" name="radio-group" data-toggle="modal" data-target=".bd-example-modal-lg1" />
+                            <label for="test2">Show Local Availblity</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <footer>
+    </footer>
+</body>
+</Html>
+
+
